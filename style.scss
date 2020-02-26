@@ -3,6 +3,7 @@ $lblue: #00afcb;
 $pink: rgba(202, 80, 151, 1);
 $clear: rgba(202, 80, 151, 0);
 $white: #ffffff;
+$offwhite: #F7F9FB;
 
 $primary-font: 'Montserrat', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
@@ -22,6 +23,14 @@ a {
     text-decoration: none;
 }
 
+
+h2 {
+    color: $dblue;
+    font-family: $primary-font;
+    font-size: 24px;
+    font-weight: 700;
+}
+
 #hero {
     height: 100vh;
     background-color: #012f49;
@@ -34,33 +43,37 @@ a {
     font-family: $primary-font;
 
     .button {
-        background: $dblue;
         width: 240px;
         height: 60px;
-        border: $border;
-        color: $white;
-        font-family: $primary-font;
-        font-weight: 300;
+        font-weight: 500;
         font-size: 18px;
-        transition: all 0.4s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-
-        &:hover {
-            background: $pink;
-
-            & .arrow-container {
-                transform: rotateZ(90deg);
-                transition: all 0.6s ease;
-            }
-
-
-        }
     }
+    
 
+}
+
+.button {
+    background: $dblue;
+    border: $border;
+    color: $white;
+    font-family: $primary-font;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
+    &:hover {
+        background: $pink;
+
+        & .arrow-container {
+            transform: rotateZ(90deg);
+            transition: all 0.6s ease;
+        }
+
+
+    }
 }
 
 .arrow-container {
@@ -117,6 +130,130 @@ a {
     }
 }
 
-#portfolio {
-    height: 100vh;
+#navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $dblue;
+    font-family: $primary-font;
+    position: sticky;
+    top: 0;
+    font-weight: 700;
+    z-index: 500;
+
+    .logo {
+        font-size: 24px;
+        border-bottom: 3px solid $lblue;
+        line-height: 1;
+        margin: 0 20px;
+        color: $white;
+    }
+
+    a {
+      font-size: 14px;
+      margin: 0 20px;
+      color: $white;
+
+      
+      &:hover {
+          color: $pink;
+      }
+
+      &:active {
+          color: $lblue;
+      }
+
+    }
+
 }
+
+#portfolio, #about, #blog, #footer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    background: $offwhite;
+}
+
+
+#homepage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 242px);
+    grid-template-rows: repeat(3, 187px);
+    margin-bottom: 40px;
+  }
+  .item {
+    
+    position: relative;
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+        background-color: $dblue;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    
+    &:hover .overlay {
+        opacity: 1;
+    }
+
+    .project-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-200%);
+        transition: 0.5s ease;
+        cursor: default;
+    }
+
+    &:hover .project-text {
+        transform: translateY(0%);
+    }
+
+    .explainer {
+        font-family: $primary-font;
+        font-weight: 500;
+        color: $lblue;
+    }
+
+    .project-title {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 20px;
+        color: $white;
+    }
+
+    .item-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .button {
+        transform: translateY(200%);
+        transition: 0.5s ease;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 5px;
+        margin-top: 30px;
+    }
+
+    &:hover .button {
+        transform: translateY(0%);
+    }
+  }
