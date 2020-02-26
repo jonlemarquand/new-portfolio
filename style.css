@@ -1,7 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 #hero {
@@ -15,7 +22,7 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
-#hero button {
+#hero .button {
   background: #012f49;
   width: 240px;
   height: 60px;
@@ -30,10 +37,10 @@ body {
   align-items: center;
   cursor: pointer;
 }
-#hero button:hover {
+#hero .button:hover {
   background: #ca5097;
 }
-#hero button:hover .arrow-container {
+#hero .button:hover .arrow-container {
   transform: rotateZ(90deg);
   transition: all 0.6s ease;
 }
@@ -84,6 +91,10 @@ body {
 #main-socials .hero-social:hover {
   background-color: #ca5097;
   cursor: pointer;
+}
+
+#portfolio {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,10 +9,17 @@ $secondary-font: 'Open Sans', sans-serif;
 
 $border: $white 2px solid;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
 }
 
 #hero {
@@ -26,7 +33,7 @@ body {
     align-items: center;
     font-family: $primary-font;
 
-    button {
+    .button {
         background: $dblue;
         width: 240px;
         height: 60px;
@@ -108,4 +115,8 @@ body {
             cursor: pointer;
         }
     }
+}
+
+#portfolio {
+    height: 100vh;
 }
