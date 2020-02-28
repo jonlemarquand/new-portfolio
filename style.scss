@@ -169,13 +169,13 @@ h2 {
 
 }
 
-#portfolio, #about, #blog, #footer {
+#portfolio, #about, #blog {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 80px;
     background: $offwhite;
 }
 
@@ -184,7 +184,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(4, 242px);
     grid-template-rows: repeat(3, 187px);
-    margin-bottom: 40px;
+    margin: 40px 0;
   }
   .item {
     
@@ -216,7 +216,7 @@ h2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translateY(-200%);
+        transform: translateY(-150%);
         transition: 0.5s ease;
         cursor: default;
     }
@@ -236,6 +236,8 @@ h2 {
         font-weight: 700;
         font-size: 20px;
         color: $white;
+        text-align: center;
+        padding: 0 5px;
     }
 
     .item-img {
@@ -245,7 +247,7 @@ h2 {
     }
 
     .button {
-        transform: translateY(200%);
+        transform: translateY(150%);
         transition: 0.5s ease;
         font-weight: 500;
         font-size: 16px;
@@ -256,4 +258,28 @@ h2 {
     &:hover .button {
         transform: translateY(0%);
     }
+  }
+
+  .about-me {
+      display: flex;
+      align-items: center;
+      width: 1000px;
+      margin-top: 40px;
+      font-family: $secondary-font;
+      color: $dblue;
+  }
+
+  #footer {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    background: $dblue;
+
+    h2,p {
+        color: $white;
+    }
+
   }
