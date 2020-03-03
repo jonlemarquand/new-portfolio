@@ -236,7 +236,7 @@ h2 {
   /* 15% from the top and centered */
   border: 1px solid #888;
   width: 700px;
-  height: 80vh;
+  height: 85vh;
 }
 
 /* The Close Button */
@@ -274,21 +274,30 @@ h2 {
   width: 100%;
   border-top: 5px solid #00afcb;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.modalText .modalExplainer {
+.modalText .modalTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modalText #modalExplainer {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #00afcb;
 }
-.modalText .modalTitle {
+.modalText #modalTitle {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #012f49;
   font-size: 24px;
 }
-.modalText .modalInfo {
+.modalText #modalInfo {
   font-family: "Open Sans", sans-serif;
   color: #012f49;
+  margin: 0;
 }
 
 #slideOptions {
@@ -344,6 +353,49 @@ h2 {
 .slideDots:hover {
   background: #ca5097;
   border: #ca5097 2px solid;
+}
+
+.link-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+.link-icons #modalGithub, .link-icons #modalWeblink {
+  border: #ca5097 2px solid;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: all 0.4s ease;
+}
+.link-icons #modalGithub:hover, .link-icons #modalWeblink:hover {
+  background-color: #ca5097;
+  cursor: pointer;
+}
+.link-icons #modalGithub {
+  background: url(assets/github.png);
+  background-size: contain;
+}
+.link-icons #modalWeblink {
+  background: url(assets/web.png);
+  background-size: contain;
+}
+
+#view-page-button {
+  border: #ca5097 2px solid;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: #ca5097;
+  transition: all 0.4s ease;
+}
+#view-page-button:hover {
+  border: #F7F9FB 2px solid;
+  color: #F7F9FB;
+  background: #ca5097;
+  cursor: pointer;
 }
 
 .about-me {

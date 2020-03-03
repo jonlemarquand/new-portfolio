@@ -281,7 +281,7 @@ h2 {
     margin: 5% auto; /* 15% from the top and centered */
     border: 1px solid #888;
     width: 700px;
-    height: 80vh;
+    height: 85vh;
   }
   
   /* The Close Button */
@@ -320,23 +320,33 @@ h2 {
     width: 100%;
     border-top: 5px solid $lblue;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-    .modalExplainer{
+    .modalTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #modalExplainer{
         font-family: $primary-font;
         font-weight: 500;
         color: $lblue;
     }
 
-    .modalTitle{
+    #modalTitle{
         font-family: $primary-font;
         font-weight: 700;
         color: $dblue;
         font-size: 24px;
     }
 
-    .modalInfo {
+    #modalInfo {
         font-family: $secondary-font;
         color: $dblue;
+        margin: 0;
     }
 }
 
@@ -397,6 +407,58 @@ h2 {
         background: $pink;
         border: $border-pink;
     }
+}
+
+.link-icons {
+
+    display: flex;
+    justify-content: flex-start;
+
+    #modalGithub, #modalWeblink {
+    border: $border-pink;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: all 0.4s ease;
+
+    &:hover {
+        background-color: $pink;
+        cursor: pointer;
+    }
+
+    }
+
+    #modalGithub {
+        background: url(assets/github.png);
+        background-size: contain;
+    }
+
+    #modalWeblink {
+        background: url(assets/web.png);
+        background-size: contain;
+    }
+
+}
+
+#view-page-button {
+    border: $border-pink;
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $primary-font;
+    color: $pink;
+    transition: all 0.4s ease;
+
+    &:hover {
+        border: $border;
+        color: $offwhite;
+        background: $pink;
+        cursor: pointer;
+    }
+
 }
 
 .about-me {

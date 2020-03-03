@@ -1,15 +1,26 @@
 // Get the modal
 var modal = document.getElementById("mandoModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("quaverBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("closeModal")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+
+var modalTitle = document.getElementById("modalTitle");
+var modalExpaliner = document.getElementById("modalExplainer");
+
+var btns = document.getElementsByClassName("project-button");
+
+for (var i = 0; i < btns.length; i++) {    
+		btns[i].addEventListener('click', (function(j) {    	  
+        return function() {
+          modalTitle.innerHTML = modalData[j].title;
+          modalExplainer.innerHTML = modalData[j].explainer;
+          modal.style.display="block";
+          //alert(j)
+        }
+      })
+      (i)
+    )
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -50,3 +61,115 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " slide-white";
 }
+
+//alert(modalData[0].images[0]);
+
+var modalData = [{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "Quaver Music",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+},
+{
+  "title": "I Know Mando",
+  "explainer": "Website",
+  "github": "https://github.com/jonlemarquand",
+  "weblink": "https://www.iknowmando.com",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "readMore": "/page-template.html",
+  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+}
+];
