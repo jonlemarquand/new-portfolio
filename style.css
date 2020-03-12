@@ -11,11 +11,24 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h2, h3 {
   color: #012f49;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #012f49;
+  font-size: 0.875em;
 }
 
 #hero {
@@ -405,6 +418,28 @@ h2 {
   margin-top: 40px;
   font-family: "Open Sans", sans-serif;
   color: #012f49;
+}
+
+.blog-post {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+}
+.blog-post .blog-image {
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
+  border: #00afcb 4px solid;
+}
+.blog-post .blog-text {
+  width: 700px;
+}
+.blog-post h3 {
+  margin: 0;
+}
+.blog-post .blog-series {
+  color: #00afcb;
+  font-family: "Montserrat", sans-serif;
 }
 
 #footer {

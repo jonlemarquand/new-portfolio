@@ -10,6 +10,7 @@ $secondary-font: 'Open Sans', sans-serif;
 
 $border: $white 2px solid;
 $border-pink: $pink 2px solid;
+$border-blue: $lblue 4px solid;
 
 html {
     scroll-behavior: smooth;
@@ -25,11 +26,24 @@ a {
 }
 
 
-h2 {
+h2, h3 {
     color: $dblue;
     font-family: $primary-font;
-    font-size: 24px;
     font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-family: $secondary-font;
+    color: $dblue;
+    font-size: 0.875em;
 }
 
 #hero {
@@ -469,6 +483,34 @@ h2 {
     font-family: $secondary-font;
     color: $dblue;
 }
+
+.blog-post {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+
+    .blog-image {
+        height: 120px;
+        width: 120px;
+        margin-right: 20px;
+        border: $border-blue;
+    }
+    
+    .blog-text {
+        width: 700px;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    .blog-series {
+        color: $lblue;
+        font-family: $primary-font;
+    }
+
+}
+
 
 #footer {
     height: 90vh;
