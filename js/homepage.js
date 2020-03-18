@@ -112,7 +112,7 @@ var modalData = [{
   "weblink": "https://www.iknowmando.com",
   "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   "readMore": "/page-template.html",
-  "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
+  "images": ["assets/slide_cpei1.jpg","assets/slide_cpei2.jpg","assets/slide_cpei3.jpg"],
 },
 {
   "title": "Loving People, Changing Lives Conference",
@@ -169,7 +169,7 @@ var modalData = [{
   "images": ["/assets/cpei.png","/assets/cpei.png","/assets/cpei.png"],
 },
 {
-  "title": "World of Wrestlin'",
+  "title": "Chord Theory",
   "explainer": "Website",
   "github": "https://github.com/jonlemarquand",
   "weblink": "https://www.iknowmando.com",
